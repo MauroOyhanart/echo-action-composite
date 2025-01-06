@@ -12,7 +12,7 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
-    
+
 runs:
   using: "composite"
   steps:
@@ -35,4 +35,8 @@ runs:
 
     - name: Run goodbye.sh
       run: goodbye.sh
+      shell: bash
+    
+    - name: stanley
+      run: echo 'Stanley - Since 1913' >> stanley.txt
       shell: bash
